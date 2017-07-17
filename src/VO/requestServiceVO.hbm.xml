@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Mar 20, 2015 12:57:35 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="VO.requestServiceVO" table="SERVICE_VO">
+        <id name="service_id" type="int">
+            <column name="SERVICE_ID" />
+            <generator class="increment" />
+        </id>
+        <property name="service_type" type="java.lang.String">
+            <column name="SERVICE_TYPE" />
+        </property>
+        <property name="service_description" type="java.lang.String">
+            <column name="SERVICE_DESCRIPTION" />
+        </property>
+        <many-to-one name="addResidentVO" class="VO.addResidentVO" fetch="join">
+            <column name="RESIDENT_ID" />
+        </many-to-one>
+    </class>
+</hibernate-mapping>

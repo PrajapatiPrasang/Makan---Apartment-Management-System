@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Mar 20, 2015 12:57:35 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="VO.addApartmentVO" table="ADD_APARTMENT_VO">
+        
+        <id name="apartment_id" type="int">
+            <column name="APARTMENT_ID" />
+            <generator class="increment" />
+        </id>
+        
+        <property name="file_name" type="java.lang.String">
+            <column name="FILE_NAME" />
+        </property>
+        
+        <property name="encrypted_name" type="java.lang.String">
+            <column name="ENCRYPTED_NAME" />
+        </property>
+        
+        <property name="address" type="java.lang.String">
+            <column name="ADDRESS" />
+        </property>
+        
+        <property name="bedroom" type="int">
+            <column name="NO_OF_BEDROOM" />
+        </property>
+        
+        <property name="bathroom" type="int">
+            <column name="NO_OF_BATHROOM" />
+        </property>
+        
+        <property name="aminities" type="java.lang.String">
+            <column name="AMINITIES" />
+        </property>
+        
+        <property name="city" type="java.lang.String">
+            <column name="CITY" />
+        </property>
+        
+        <property name="state" type="java.lang.String">
+            <column name="STATE" />
+        </property>
+        
+        <property name="zip_code" type="java.lang.Long">
+            <column name="ZIP_CODE" />
+        </property>
+        
+        <property name="price" type="java.lang.Float">
+            <column name="PRICE" />
+        </property>
+        
+        <property name="rental_status" type="java.lang.String">
+            <column name="RENTAL_STATUS" />
+        </property>
+        
+        
+    </class>
+</hibernate-mapping>

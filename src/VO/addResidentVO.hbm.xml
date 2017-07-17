@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="VO.addResidentVO" table="ADD_RESIDENT_VO">
+        
+        <id name="resident_id" type="int">
+            <column name="RESIDENT_ID" />
+            <generator class="increment" />
+        </id>
+        
+        <property name="first_name" type="java.lang.String">
+            <column name="FIRST_NAME" />
+        </property>
+        
+        <property name="last_name" type="java.lang.String">
+            <column name="LAST_NAME" />
+            </property>
+            
+		<property name="email_id" type="java.lang.String">
+            <column name="EMAIL_ID" />
+        </property>
+            
+		<property name="phone_no" type="java.lang.Long">
+            <column name="PHONE_NUMBER" />
+        </property>
+            
+		<property name="address" type="java.lang.String">
+            <column name="ADDRESS" />
+        </property>
+        
+        <property name="user_id" type="java.lang.String">
+            <column name="USER_ID" />
+        </property> 
+        
+        <property name="password" type="java.lang.String">
+            <column name="PASSWORD" />
+        </property>    
+        
+        <property name="user_type" type="java.lang.String">
+            <column name="USER_TYPE" />
+        </property>
+        
+        <many-to-one name="loginvo" class="VO.loginVO" fetch="join">
+            <column name="LOGIN_id" />
+        </many-to-one>
+        
+        <many-to-one name="addApartmentVO" class="VO.addApartmentVO" fetch="join">
+            <column name="APARTMENT_ID" />
+        </many-to-one>
+    </class>
+</hibernate-mapping>

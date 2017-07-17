@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Mar 20, 2015 12:57:35 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="VO.addAppointmentVO" table="ADD_APPOINTMENT_VO">
+        
+        <id name="appointment_id" type="int">
+            <column name="APPOINTMENT_ID" />
+            <generator class="increment" />
+        </id>
+        
+        <property name="firstname" type="java.lang.String">
+            <column name="FIRSTNAME" />
+        </property>
+        
+        <property name="lastname" type="java.lang.String">
+            <column name="LASTNAME" />
+        </property>
+        
+        <property name="emaiid" type="java.lang.String">
+            <column name="EMAILID" />
+        </property>
+        
+        <property name="phoneno" type="java.lang.String">
+            <column name="PHONENO" />
+        </property>
+        
+        <property name="address" type="java.lang.String">
+            <column name="ADDRESS" />
+        </property>
+        
+        <property name="date" type="java.lang.String">
+            <column name="DATE" />
+        </property>
+        
+        <property name="slot" type="java.lang.String">
+            <column name="SLOT" />
+        </property>
+        
+        
+        <many-to-one name="addApartmentVO" class="VO.addApartmentVO" fetch="join">
+            <column name="APARTMENT_ID" />
+        </many-to-one>
+    
+    </class>
+</hibernate-mapping>

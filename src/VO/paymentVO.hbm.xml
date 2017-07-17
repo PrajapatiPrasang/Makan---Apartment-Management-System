@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Mar 20, 2015 12:57:35 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="VO.paymentVO" table="PAYMENT_VO">
+        <id name="payment_id" type="int">
+            <column name="PAYMENT_ID" />
+            <generator class="increment" />
+        </id>
+        <property name="date" type="java.lang.String">
+            <column name="DATE" />
+        </property>
+        
+        <!-- <property name="rent" type="java.lang.Float">
+            <column name="RENT" />
+        </property> -->
+        
+        <property name="status" type="java.lang.String">
+            <column name="STATUS" />
+        </property>
+        
+         <many-to-one name="addApartmentVO" class="VO.addApartmentVO" fetch="join">
+            <column name="APARTMENT_ID" />
+        </many-to-one>
+        
+         <many-to-one name="addResidentVO" class="VO.addResidentVO" fetch="join">
+            <column name="RESIDENT_ID" />
+        </many-to-one>
+        
+         <property name="payment_date" type="java.sql.Timestamp">
+            <column name="PAYMENT_DATE" />
+        </property>
+    </class>
+</hibernate-mapping>
